@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { Button, View, StyleSheet } from 'react-native';
-import Tabs from './BottomTabs'
+import { StyleSheet } from 'react-native';
 import Navigation from './Navigation'
 
 export default function App() {

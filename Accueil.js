@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, Button, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Text, Image, TouchableOpacity, SafeAreaView, Platform, StatusBar } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import Products from './Products';
 
-function Accueil({ setNavType }) {
+function Accueil() {
     const [logo, setLogo] = useState(require('./assets/BSG.png'));
     const navigation = useNavigation();
     const changeLogo = () => {
@@ -18,11 +17,12 @@ function Accueil({ setNavType }) {
     return (
         // SafeAreaView permet de gérer les problèmes de padding sur les appareils android
         <SafeAreaView style={styles.container}>
+            <Text style={styles.text}>STARBUCKS</Text>
             {/* Changement de logo */}
             <TouchableOpacity onPress={changeLogo}>
                 <Image source={logo} style={styles.logo} resizeMode="contain" />
             </TouchableOpacity>
-            <Text style={styles.text}>STARBUCKS</Text>
+            <Text style={styles.text2}>Test d'application Starbucks sur le thème de Battlestar Galactica !</Text>
         </SafeAreaView>
     );
 }
@@ -37,14 +37,20 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     },
     logo: {
-        width: 100,
-        height: 100,
-        marginBottom: 15,
+        width: 300,
+        height: 300,
+        marginBottom: 40,
     },
     text: {
         color: '#fff',
-        fontSize: 20,
+        fontSize: 60,
         fontWeight: 'bold',
+        marginBottom: 40,
+    },
+    text2: {
+        color: '#fff',
+        fontSize: 20,
+        textAlign: 'center',
     },
 });
 

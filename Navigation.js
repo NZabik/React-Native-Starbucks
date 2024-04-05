@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Accueil from "./Accueil";
-import Menu from "./Menu";
+import Menu from "./MenuModale";
+import Menu2 from "./Menu";
 import Contact from "./Contact";
 import Contact2 from "./Contact2";
 import Contact3 from "./Contact3";
@@ -21,10 +22,12 @@ function AccueilScreen() {
                 headerTintColor: '#fff',
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
-                    if (route.name === 'Menu') {
+                    if (route.name === 'Menu Modale') {
                         iconName = 'cafe-outline';
-                    } else if (route.name === 'Accueil') {
+                    } else if (route.name === 'Présentation') {
                         iconName = 'home-outline';
+                    } else if (route.name === 'Menu') {
+                        iconName = 'cafe-outline';
                     }
                     // You can return any component that you like here!
                     return <Ionicons name={iconName} size={size} color={color} />;
@@ -34,8 +37,9 @@ function AccueilScreen() {
                 tabBarStyle: { backgroundColor: '#000' }
             })}
         >
-            <Tab.Screen name="Accueil" component={Accueil} />
-            <Tab.Screen name="Menu" component={Menu} />
+            <Tab.Screen name="Présentation" component={Accueil} />
+            <Tab.Screen name="Menu Modale" component={Menu} />
+            <Tab.Screen name="Menu" component={Menu2} />
         </Tab.Navigator>
     );
 }
@@ -48,7 +52,7 @@ function DiversScreen() {
                 headerTintColor: '#fff',
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
-                    if (route.name === 'Divers1') {
+                    if (route.name === 'Modale') {
                         iconName = focused ? 'list' : 'list-outline';
                     } else if (route.name === 'Divers2') {
                         iconName = focused ? 'list' : 'list-outline';
@@ -63,7 +67,7 @@ function DiversScreen() {
                 tabBarStyle: { backgroundColor: '#000' }
             })}
         >
-            <Tab.Screen name="Divers1" component={Divers} />
+            <Tab.Screen name="Modale" component={Divers} />
             <Tab.Screen name="Divers2" component={Divers2} />
             <Tab.Screen name="Divers3" component={Divers3} />
         </Tab.Navigator>
