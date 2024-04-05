@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, Button } from 'react-native';
 
 
-function Contact() {
+function Contact2() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Email</Text>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 });
-export default Contact;
+export default Contact2;
