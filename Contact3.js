@@ -7,8 +7,6 @@ import { Marker } from 'react-native-maps';
 function Contact3() {
 
     const [isVisible, setIsVisible] = useState(false);
-    const window = Dimensions.get('window');
-    const { width, height } = window;
     const options = {
         latitude: 50.37216,
         longitude: 3.08272,
