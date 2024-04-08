@@ -8,7 +8,7 @@ function Contact3() {
 
     const [isVisible, setIsVisible] = useState(false);
     const window = Dimensions.get('window');
-    const { width, height }  = window;
+    const { width, height } = window;
     const options = {
         latitude: 50.37216,
         longitude: 3.08272,
@@ -43,17 +43,15 @@ function Contact3() {
                     }}
                 >
                     <Marker
-        coordinate={{
-            latitude: 50.37216,
-            longitude: 3.08272,
-        }}
-        title={"SOFIP Douai"}
-        description={"133 Rue Saint-Thomas"}
-    />
-</MapView>
-                
-                {!isVisible && <Button onPress={() => setIsVisible(true)} color="#FF0000" title='Navigation'></Button>}
-                
+                        coordinate={{
+                            latitude: 50.37216,
+                            longitude: 3.08272,
+                        }}
+                        title={"SOFIP Douai"}
+                        description={"133 Rue Saint-Thomas"}
+                    />
+                </MapView>
+                {!isVisible && <Button onPress={() => setIsVisible(true)} color="#A7000C" title='Navigation'></Button>}
             </View>
         </>
     );
