@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, Button } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 function Divers2() {

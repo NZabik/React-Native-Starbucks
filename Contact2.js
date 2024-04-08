@@ -1,10 +1,17 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Linking } from 'react-native';
 
 
 function Contact2() {
+    const mail = 'test@gmail.com';
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Email</Text>
+            <Text style={styles.text}>test@gmail.com</Text>
+            <Button
+                title="Nous écrire"
+                onPress={() => Linking.openURL(`mailto:${mail}`)}
+                color="#A7000C"
+            />
         </View>
     );
 }
@@ -20,6 +27,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 20,
         fontWeight: 'bold',
+        marginBottom: 20,
     },
 });
 export default Contact2;

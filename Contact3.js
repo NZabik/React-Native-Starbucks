@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Button, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Button, Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
 import React, { useState, useEffect } from 'react';
 import { Popup } from 'react-native-map-link';

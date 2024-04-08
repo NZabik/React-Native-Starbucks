@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, Modal, Button, Linking } from 'react-native';
+import { StyleSheet, Text, View, Button, Linking } from 'react-native';
 
 
 function Contact() {
